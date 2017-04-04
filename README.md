@@ -1,4 +1,4 @@
 # innod-webtier-aid
-yap
+https://github.com/gatsbyjs/gatsby
 
-If harambe 🐒 and my girl 👧 😍 both drowning 😱 👋 and I can only save one 😤 😬 Catch me at my girl funeral 😔 👻 🌹 with my **** out 😏 💯 😎 🍆
+https://github.com/netlify/netlify-cms
