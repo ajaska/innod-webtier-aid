@@ -9,6 +9,8 @@ const options = {
     {
       name: 'Montserrat',
       styles: [
+        '300',
+        '400',
         '700',
       ],
     },
