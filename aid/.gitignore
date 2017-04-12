@@ -1,3 +1,11 @@
+# macOS
+.DS_Store
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+
 # Logs
 logs
 *.log
