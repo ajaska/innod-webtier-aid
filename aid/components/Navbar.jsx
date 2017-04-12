@@ -3,14 +3,15 @@ import { config } from 'config'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 
+import '~/styles/Navbar'
 
-class Navbar extends React.component
+class Navbar extends React.Component
 {
     render()
     {
         return (
             <nav>
-                <img src="/assets/images/ai_logo_full_black.png"></img>
+                <img src="/assets/images/aid_logo_full_white.png"></img>
                 <ul>
                     <li>About</li>
                     <li>Events</li>
@@ -21,3 +22,5 @@ class Navbar extends React.component
         )
     }
 }
+
+export default Navbar

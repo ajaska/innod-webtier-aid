@@ -1,8 +1,16 @@
 {
-  "name": "Association for India's Development, Berkeley",
+  "name": "aid-berkeley",
   "description": "AID Berkeley student assn website",
   "version": "1.0.0",
   "author": "Innovative Design 2017",
+  "babel": {
+    "presets": ["react", "es2015", "stage-0"],
+    "plugins": [
+      "add-module-exports", 
+      "transform-object-assign",
+      "babel-plugin-root-import"
+    ]
+  },
   "dependencies": {
     "front-matter": "^2.1.2",
     "gatsby": "^0.12.36",
@@ -25,6 +33,7 @@
     "typography-plugin-code": "^0.15.0"
   },
   "devDependencies": {
+    "babel-plugin-root-import": "^5.1.0",
     "gh-pages": "^0.12.0"
   },
   "keywords": [

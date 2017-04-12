@@ -1,0 +1,18 @@
+// Mixins
+@mixin tinted-background-image($url, $tint)
+{
+    background-image: linear-gradient($tint, $tint), url($url);
+}
+
+
+// Global
+* {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
