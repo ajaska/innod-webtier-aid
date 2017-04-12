@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '~/styles/ActionCard'
 
 const image_dir = '/assets/images/'
@@ -18,7 +18,7 @@ const image_dir = '/assets/images/'
  * - <label>: message to display
  * - <title>: title to put on the button
  */
-class ActionCard extends Component
+class ActionCard extends React.Component
 {
     render()
     {
@@ -40,8 +40,10 @@ class ActionCard extends Component
                 tags[c.type] = c.props.children
         })
 
+        console.log(this.constructor.name)
+
         return (
-            <div className={this.constructor.name} style={divStyle} >
+            <div className='ActionCard' style={divStyle} >
                 <p style={textStyle} >{ this.props.label || tags.label }</p>
                 <a style={linkStyle} >{ this.props.title || tags.title }</a>
             </div>

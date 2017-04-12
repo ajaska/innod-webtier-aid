@@ -7,7 +7,7 @@ import Headroom from 'react-headroom'
 import { rhythm } from '../utils/typography'
 
 import '~/styles/index'
-import App from './App.jsx'
+import App from './index'
 
 module.exports = React.createClass({
   propTypes () {
