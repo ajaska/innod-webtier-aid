@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "Association for India's Development, Berkeley",
+  "description": "AID Berkeley student assn website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Innovative Design 2017",
   "dependencies": {
     "front-matter": "^2.1.2",
     "gatsby": "^0.12.36",
