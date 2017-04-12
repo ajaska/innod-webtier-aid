@@ -1,0 +1,61 @@
+<!-- I hate navbars but it must be done - Erik Yang -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width">
+
+<style>
+	nav{
+		height: 80px;
+		padding: 15px 30px;
+	}
+	nav img{
+		max-height: 100%;
+		display: inline-block;
+	}
+	nav ul, nav li{
+		list-style-type: none;
+	}
+	nav ul{
+		display: table;
+		float: right;
+		padding: 0px;
+		height: 100%;
+		max-width: 100%;
+	}
+	nav li{
+		position: relative;
+		display: table-cell;
+		font-size: 16px;
+		font-family: "Avenir", sans-serif;
+		padding: 0px 30px;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		border-top: 0px solid transparent;
+	}
+	nav li:hover{
+		border-top: 3px solid #EEE;
+		transform: translateY(-1px);
+	}
+	@media (max-width: 768px){
+		nav ul{
+			float: none;
+			height: 50px;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 80px;
+			padding: 0px 5px;
+		}
+	}
+</style>
+
+<nav>
+	<img src="aidlogo.png"></img>
+	<ul>
+		<li>About</li>
+		<li>Events</li>
+		<li>Projects</li>
+		<li>Contact</li>
+	</ul>
+</nav>
