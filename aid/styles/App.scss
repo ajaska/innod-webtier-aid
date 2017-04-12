@@ -1,11 +1,5 @@
 @import 'index';
 
-header, section {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
 .app {
     width: 100vw;
     height: 100vh;
@@ -17,7 +11,7 @@ header, section {
     color: white;
     text-align: center;
 
-    justify-content: space-between;
+    @include flexbox(column, nowrap, space-between, center);
 
     > h1 {
         font-size: 36px;
@@ -43,11 +37,12 @@ header, section {
     > a:hover { top: -8px; }
 }
 
-section {
+section { margin: 0px auto 40px auto; }
+section:not(.cards) {
     width: 50%;
     min-width: 300px;
     max-width: 920px;
-    margin: 0px auto;
+    @include flexbox(column, nowrap, space-around, center);
 
     .title {
         margin: 40px 0px;
@@ -55,7 +50,16 @@ section {
         font-size: 28px;
         font-weight: 400;
     }
-    p {
-        font-size: 20px;
+    p { font-size: 20px; }
+}
+
+.cards {
+    width: 60%;
+    @include flexbox(row, wrap, center, center);
+
+    .ActionCard {
+        width: 460px;
+        height: 200px;
+        margin: 0px 20px;
     }
 }

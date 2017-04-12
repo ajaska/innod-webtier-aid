@@ -5,8 +5,8 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 
 import '~/styles/App'
-import Navbar     from '~/components/Navbar'
-import ActionCard from '~/components/ActionCard'
+import Navbar     from './components/_Navbar'
+import ActionCard from './components/_ActionCard'
 
 class App extends React.Component
 {
@@ -41,6 +41,20 @@ class App extends React.Component
                 </section>
 
                 <section className="cards">
+                    <ActionCard color='#E53935' image='card1.png'>
+                        <label>Empower underprevileged communities of India</label>
+                        <title>Join Us</title>
+                    </ActionCard>
+
+                    <ActionCard color='#03A9F4' image='card2.png'>
+                        <label>Make a real impact with your contribution</label>
+                        <title>Donate</title>
+                    </ActionCard>
+                </section>
+
+                <section className="people">
+                    <h3 className="title">Squad</h3>
+                    {/* TODO: IMPLEMENT PEOPLE */}
                 </section>
             </div>
         )
