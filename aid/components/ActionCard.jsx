@@ -40,8 +40,6 @@ class ActionCard extends React.Component
                 tags[c.type] = c.props.children
         })
 
-        console.log(this.constructor.name)
-
         return (
             <div className='ActionCard' style={divStyle} >
                 <p style={textStyle} >{ this.props.label || tags.label }</p>

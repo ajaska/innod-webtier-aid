@@ -46,6 +46,6 @@
     "deploy": "gatsby build --prefix-links && gh-pages -d public",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "surge": "cd public && surge --domain aid-berkeley.surge.sh && cd -"
+    "surge": "rm -rf public && gatsby build && cd public && surge --domain aid-berkeley.surge.sh && cd -"
   }
 }

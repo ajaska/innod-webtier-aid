@@ -5,8 +5,8 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 
 import '~/styles/App'
-import Navbar     from './components/_Navbar'
-import ActionCard from './components/_ActionCard'
+import Navbar     from '~/components/Navbar'
+import ActionCard from '~/components/ActionCard'
 
 class App extends React.Component
 {
