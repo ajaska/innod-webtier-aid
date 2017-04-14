@@ -18,10 +18,9 @@ const image_dir = '/assets/images/'
  * - <label>: message to display
  * - <title>: title to put on the button
  */
-class ActionCard extends React.Component
-{
-    render()
-    {
+class ActionCard extends React.Component {
+
+    render() {
         const divStyle = {
             backgroundImage: `url(${image_dir + this.props.image})`,
         }
