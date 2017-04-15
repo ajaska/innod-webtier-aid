@@ -3,11 +3,12 @@ import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
+import Helmet from 'react-helmet'
 
 import { rhythm } from '../utils/typography'
 
 import '~/styles/index'
-import App from './index'
+import Navbar from '~/components/Navbar'
 
 module.exports = React.createClass({
   propTypes () {
@@ -17,9 +18,23 @@ module.exports = React.createClass({
   },
   render () {
     return (
-      <div className="body">    
-        {this.props.children}
+      <div>
+        <Helmet>
+          <title>AID BERKELEY</title>
+          <meta charSet="utf-8" />
+
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        </Helmet>
+
+        <div className="head">
+          <Navbar />
+        </div>
+
+        <div className="body">    
+          {this.props.children}
+        </div>
       </div>
+
     )
   },
 })
