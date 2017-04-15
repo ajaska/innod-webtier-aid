@@ -26,7 +26,10 @@ export default class Events extends React.Component {
             <Event name={item.name} date={item.date} location={item.location} time={item.time} key={i} />
         ))
         return (
-           <div style={styles.event}>{event}</div>
+          <div className='events'>
+            {event}
+          </div>
+          //<div style={styles.event}>{event}</div>
         )
     }
 }
