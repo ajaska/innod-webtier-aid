@@ -6,7 +6,7 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import Event from '~/components/Event'
 
-export default class About extends React.Component {
+export default class Events extends React.Component {
     render () {
         const events = [
             {

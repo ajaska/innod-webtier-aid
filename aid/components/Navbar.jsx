@@ -14,7 +14,7 @@ class Navbar extends React.Component
                 <img src="/assets/images/aid_logo_full_white.png"></img>
                 <ul>
                     <li>About</li>
-                    <li>Events</li>
+                    <li><Link to={prefixLink('/events/')}>Events</Link></li>
                     <li>Projects</li>
                     <li>Contact</li>
                 </ul>
