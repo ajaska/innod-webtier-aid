@@ -21,8 +21,6 @@ module.exports = React.createClass({
       <div>
         <Helmet>
           <title>AID BERKELEY</title>
-          <meta charSet="utf-8" />
-
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         </Helmet>
 
