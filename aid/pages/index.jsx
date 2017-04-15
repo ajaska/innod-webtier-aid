@@ -56,6 +56,7 @@ class App extends React.Component
                     <h3 className="title">Squad</h3>
                     {/* TODO: IMPLEMENT PEOPLE */}
                 </section>
+
             </div>
         )
     }
