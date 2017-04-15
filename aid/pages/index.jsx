@@ -5,21 +5,14 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from 'react-helmet'
 
 import '~/styles/App'
-import Navbar     from '~/components/Navbar'
 import ActionCard from '~/components/ActionCard'
 
-class App extends React.Component
+class Index extends React.Component
 {
     render ()
     {
         return (
             <div>
-                <Helmet>
-                    <title>AID BERKELEY</title>
-                    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-                </Helmet>
-
-                <Navbar />
                 <header className='app' >
                     <div></div>
 
@@ -62,4 +55,4 @@ class App extends React.Component
     }
 }
 
-export default App
+export default Index
