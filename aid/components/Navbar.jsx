@@ -21,12 +21,21 @@ class Navbar extends React.Component
         this.setState({menuActive: !this.state.menuActive})
     }
 
+    hideMenu()
+    {
+        this.setState({menuActive: false})
+    }
+
     render()
     {
         const menuActive = this.state.menuActive ? 'active' : ''
 
         return (
-            <Headroom disableInlineStyles={true} >
+            <Headroom 
+                disableInlineStyles={true} 
+                downTolerance={8} 
+                onUnpin={() => this.hideMenu()}
+                >
                 <img className='logo' src="/assets/images/aid_logo_full_white.png"></img>
 
                 <div className={`button ${menuActive}`} onClick={() => this.toggleMenu()} >
