@@ -21,11 +21,7 @@ module.exports = React.createClass({
   render () {
     return (
       <div>
-
-        <Helmet
-          title={`${config.siteTitle}`}
-        >
-
+        <Helmet title={`${config.siteTitle}`} >
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         </Helmet>
 
