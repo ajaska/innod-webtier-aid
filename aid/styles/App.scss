@@ -1,10 +1,33 @@
 @import 'index';
 
-header { display: none; }
-
 .app {
 
     * { margin: 0px; }
+
+    > header {
+        position: relative;
+
+        height: 30vh;
+        @media (orientation: landscape) { 
+            height: 60vh; 
+        }
+        
+        color: white;
+        .backdrop { background: url('/assets/images/banner.png'); }
+        .backdrop:before { background-color: rgba(0, 0, 0, 0.6); }
+
+        
+        @include flexbox(column, nowrap, center, center);
+        h1 {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+
+            span { display: block; }
+        }
+
+        h1.full, a, .flex-fill { display: none; }
+    }
 
     > section {
         margin-top: 24px;
@@ -18,7 +41,7 @@ header { display: none; }
 
         > p {
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 1.6;
             margin-bottom: 12px;
         }

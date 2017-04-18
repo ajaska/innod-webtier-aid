@@ -41,7 +41,7 @@ class ActionCard extends React.Component {
 
         return (
             <div className='ActionCard'>
-                <div className='img' style={img} />
+                <div className='backdrop tinted' style={img} />
                 <p style={textStyle} >{ this.props.label || tags.label }</p>
                 <a style={linkStyle} >{ this.props.title || tags.title }</a>
             </div>
