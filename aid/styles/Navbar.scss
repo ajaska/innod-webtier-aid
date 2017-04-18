@@ -4,16 +4,19 @@ $navHeight: 56px;
 $animationDuration: 0.2s;
 
 .headroom-wrapper {
+    z-index: 10;
     width: 100%;
+
+    top: 0px;
     position: fixed;
 }
 
 .headroom {
     width: inherit;
     height: $navHeight;
+    transition: all $animationDuration ease-out;
 
-    z-index: 10;
-    transition: all 200ms ease-out;
+    display: none;
 
     // Children
     color: white;
@@ -50,7 +53,6 @@ $animationDuration: 0.2s;
         right: 0px;
         position: absolute;
 
-        z-index: 11;
         height: inherit;
         overflow-x: scroll;
 
@@ -73,6 +75,7 @@ $animationDuration: 0.2s;
 // From top of page (scroll = 0) to height of nav.
 // Mutually exclusive with below classes.
 .headroom--unfixed {
+    top: 0px;
     background-color: clear;
 }
 
@@ -91,5 +94,5 @@ $animationDuration: 0.2s;
 // Only activated after --unpinned as been active once, then whenever scrolled up.
 // Mutually exclusive with --unpinned.
 .headroom--pinned {
-    top: 0px;
+    // top: 0px;
 }
