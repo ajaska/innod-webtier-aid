@@ -5,7 +5,7 @@ $animationDuration: 0.2s;
 
 .headroom-wrapper {
     width: 100%;
-    position: absolute;
+    position: fixed;
 }
 
 .headroom {
@@ -79,14 +79,13 @@ $animationDuration: 0.2s;
 // Activated once scroll > navHeight, until scroll becomes 0 again.
 // Will always be active together with either --unpinned or --pinned.
 .headroom--scrolled {
-    position: fixed;
     background-color: black;
 }
 
 // Activated with --scrolled first time, then whenever scrolled down.
 // Mutually exclusive with --pinned.
 .headroom--unpinned {
-    top: -$navHeight;
+    top: 0px;
 }
 
 // Only activated after --unpinned as been active once, then whenever scrolled up.
