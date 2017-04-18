@@ -25,9 +25,7 @@ module.exports = React.createClass({
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         </Helmet>
 
-        <div className="head">
-          <Navbar />
-        </div>
+        <Navbar />
 
         <div className="body">    
           {this.props.children}
