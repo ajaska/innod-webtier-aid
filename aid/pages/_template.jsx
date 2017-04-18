@@ -19,6 +19,7 @@ module.exports = React.createClass({
   render () {
     return (
       <div>
+
         <Helmet>
           <title>AID BERKELEY</title>
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
