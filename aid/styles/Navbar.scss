@@ -1,7 +1,7 @@
 @import 'index';
 
 $navHeight: 56px;
-$animationDuration: 0.2s;
+$animationDuration: 120ms;
 
 .headroom-wrapper {
     z-index: 10;
@@ -15,8 +15,6 @@ $animationDuration: 0.2s;
     width: inherit;
     height: $navHeight;
     transition: all $animationDuration ease-out;
-
-    display: none;
 
     // Children
     color: white;
