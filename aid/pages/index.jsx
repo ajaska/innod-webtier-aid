@@ -13,7 +13,7 @@ class Index extends React.Component
     {
         return (
             <div>
-                <header className='app' >
+                <header>
                     <div></div>
 
                     <h1>

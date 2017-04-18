@@ -1,5 +1,7 @@
+@import 'index';
 
 $navHeight: 56px;
+$animationDuration: 0.2s;
 
 .headroom-wrapper {
     width: 100%;
@@ -10,21 +12,62 @@ $navHeight: 56px;
     width: inherit;
     height: $navHeight;
 
-    z-index: 100;
+    z-index: 10;
     transition: all 200ms ease-out;
 
     // Children
     color: white;
+
+    * { margin: 0px; }
     .logo { display: none; }
 
-    i.menu {
+    .button {
+        z-index: 12;
+        width: $navHeight;
+        height: inherit;
         position: relative;
-        top: 16px;
-        left: 16px;
-        font-size: 24px;
+
+        cursor: pointer;
+        transition: all $animationDuration linear;
+        i {
+            font-size: 24px;
+            top: 16px;
+            left: 16px;
+            position: absolute;
+            transition: opacity $animationDuration linear;
+        }
+        i.menu  { opacity: 1; }
+        i.clear { opacity: 0; }
+    }
+    .button.active {
+        transform: rotate(180deg);
+        i.menu  { opacity: 0; }
+        i.clear { opacity: 1; }
     }
 
-    ul { display: none; }
+    nav {
+        top: 0px;
+        right: 0px;
+        position: absolute;
+
+        z-index: 11;
+        height: inherit;
+        overflow-x: scroll;
+
+        left: 100%;
+        &.active { left: $navHeight; }
+        transition: left $animationDuration ease-out;
+    }
+
+    ul {
+        width: fit-content;
+        height: inherit;
+        font-size: 16px;
+        font-weight: 300;
+
+        @include flexbox(row, nowrap, left, center);
+        li { margin: 0px 20px; }
+    }
 }
 
 // From top of page (scroll = 0) to height of nav.
