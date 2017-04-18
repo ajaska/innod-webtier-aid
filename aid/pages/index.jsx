@@ -14,9 +14,13 @@ class Index extends React.Component
         return (
             <div className='app'>
                 <header>
-                    <div></div>
+                    <div className='backdrop tinted'></div>
+                    <div className='flex-fill'></div>
 
-                    <h1>
+                    <h1 className='short'>
+                        AID at Berkeley
+                    </h1>
+                    <h1 className='full'>
                         <span>UC Berkeley</span>
                         <span>Association for India's Development</span>
                     </h1>
