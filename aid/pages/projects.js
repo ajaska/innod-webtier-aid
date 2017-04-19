@@ -10,7 +10,7 @@ export default class Projects extends React.Component {
     return (
       <div className="content">
         <section className="projects">
-          <h3 className="title">Projects</h3>
+          <h2 className="page-title">Projects</h2>
           <ProjectsList projects={projects} />
         </section>
       </div>

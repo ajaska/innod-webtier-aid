@@ -9,9 +9,9 @@ export default class ProjectList extends React.Component {
       return (
         <ProjectCard 
           title={p.data.title}
+          subtitle={p.data.subtitle}
           description={p.data.description}
           image={backgroundImage}
-
         />
       )
     })
