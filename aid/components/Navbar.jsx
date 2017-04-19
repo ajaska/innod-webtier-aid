@@ -17,7 +17,7 @@ class Navbar extends React.Component
                 <ul>
                     <li>About</li>
                     <li><Link to={prefixLink('/events/')}>Events</Link></li>
-                    <li>Projects</li>
+                    <li><Link to={prefixLink('/projects/')}>Projects</Link></li>
                     <li>Contact</li>
                 </ul>
               </nav>

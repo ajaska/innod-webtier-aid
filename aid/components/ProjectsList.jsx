@@ -4,12 +4,14 @@ import ProjectCard from 'components/ProjectCard'
 
 export default class ProjectList extends React.Component {
   render() {
-    console.log(this.props.projects)
     const projects = this.props.projects.map(function(p) {
+      let backgroundImage = p.data.image || '/assets/images/card1.png'
       return (
         <ProjectCard 
           title={p.data.title}
           description={p.data.description}
+          image={backgroundImage}
+
         />
       )
     })
