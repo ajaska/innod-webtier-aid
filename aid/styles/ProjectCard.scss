@@ -1,22 +1,19 @@
 @import 'index';
 
+$desktop: "only screen and (min-width: 800px)";
 
 .ProjectCard {
     @include flexbox(column, nowrap, stretch, stretch);
+    $accent1: #e53935;
+    $accent2: #7ed321;
+    $accent3: #03a9f4;
+
     background-size: cover;
     background-repeat: no-repeat;
 
     color: white;
 
-    width: 100%;
-    min-width: 720px;
-    min-height: 200px;
-
     position: relative;
-
-    margin-bottom: 48px;
-
-    padding: 24px 36px 24px 36px;
 
     * { margin: 0; }
     > .titles {
@@ -33,10 +30,16 @@
         font-size: 20px;
         font-weight: 400;
     }
+    width: 100%;
+    min-height: 200px;
 
-    $accent1: #e53935;
-    $accent2: #7ed321;
-    $accent3: #03a9f4;
+    @media #{$desktop} {
+        min-width: 720px;
+    }
+
+    margin-bottom: 48px;
+
+    padding: 24px 36px 24px 36px;
 
     &:nth-child(3n+1) {
         > .titles { border-color: $accent1; }
@@ -56,7 +59,10 @@
     > .card-body {
 
         flex: 2;
-        @include flexbox(row, nowrap, space-between, flex-end);
+        @include flexbox(column, nowrap, flex-start, flex-start);
+        @media #{$desktop} {
+            @include flexbox(row, nowrap, space-between, flex-end);
+        }
         padding-left: 36px;
         > p {
 
