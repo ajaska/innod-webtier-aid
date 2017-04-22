@@ -5,31 +5,28 @@ import React from 'react'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 import Event from '~/components/Event'
+import data from './assets/data/_data.json'
 
 export default class Events extends React.Component {
+
     render () {
-        const events = [
-            {
-                name: "Run for India 2017",
-                date: "3/1/17",
-                location: "Montclair High School",
-                time: "8:00am",
-            },
-            {
-                name: "Milan Dinner",
-                date: "3/2/17",
-                location: "Civic Garden Plan",
-                time: "6:30pm",
-            }
-        ];
-        const event = events.map((item, i) => (
+
+        console.log(data[0].place)
+        // 2016-10-21T18:00:00-0700
+
+        const events = data.map(event => ({
+            name: event.name,
+            date: event.start_time.substring(0, event.start_time.indexOf('T')),
+            location: event.place ? event.place.name : null,
+            time: event.start_time.substring(event.start_time.indexOf('T') + 1, event.start_time.indexOf(':00-')),
+        }));
+
+        const toRender = events.map((item, i) => (
             <Event name={item.name} date={item.date} location={item.location} time={item.time} key={i} />
-        ))
+        ));
+
         return (
-          <div className='events'>
-            {event}
-          </div>
-          //<div style={styles.event}>{event}</div>
+            <div className='events'>{toRender}</div>
         )
     }
 }
