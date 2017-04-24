@@ -71,4 +71,13 @@ nav{
     li:hover:before {
         max-height: 3px;
     }
+
+}
+
+// when navbar is scrolled, see: react-headroom
+.headroom--scrolled {
+    & > nav {
+        background-color: black;
+        position: static;
+    }
 }

@@ -1,0 +1,98 @@
+@import 'index';
+
+$desktop: "only screen and (min-width: 800px)";
+
+.ProjectCard {
+    @include flexbox(column, nowrap, stretch, stretch);
+    $accent1: #e53935;
+    $accent2: #7ed321;
+    $accent3: #03a9f4;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    position: relative;
+
+    * { margin: 0; }
+    > .titles {
+        border-left: solid 8px;
+        padding-left: 28px;
+    }
+    h4 {
+        font-size: 30px; 
+        line-height: 36px;
+        font-weight: 500;
+    }
+
+    h5 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    width: 100%;
+    min-height: 200px;
+
+    @media #{$desktop} {
+        min-width: 720px;
+    }
+
+    margin-bottom: 48px;
+
+    padding: 24px 36px 24px 36px;
+
+    &:nth-child(3n+1) {
+        > .titles { border-color: $accent1; }
+        > .card-body > a { background-color: $accent1; }
+    }
+
+    &:nth-child(3n+2) {
+        > .titles { border-color: $accent2; }
+        > .card-body > a { background-color: $accent2; }
+    }
+
+    &:nth-child(3n+3) {
+        > .titles { border-color: $accent3; }
+        > .card-body > a { background-color: $accent3; }
+    }
+
+    > .card-body {
+
+        flex: 2;
+        @include flexbox(column, nowrap, flex-start, flex-start);
+        @media #{$desktop} {
+            @include flexbox(row, nowrap, space-between, flex-end);
+        }
+        padding-left: 36px;
+        > p {
+
+            font-size: 18px;
+            font-weight: 200;
+            max-width: 500px;
+        }
+        > a {
+            $width: 120px;
+            $height: 48px;
+            $margin: 24px;
+
+            display: block;
+            width: $width;
+            height: $height;
+            margin-left: $margin;
+            border-radius: 5px;
+            white-space: nowrap;
+
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            line-height: $height;
+        }
+    }
+
+    .backdrop:before {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    
+}
+
