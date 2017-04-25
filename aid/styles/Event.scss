@@ -1,0 +1,54 @@
+@mixin flexbox($dir, $wrap, $justify, $align)
+{
+  display: flex;
+  flex-flow: $dir $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.event {
+  border: 1px #CFD8DC solid;
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+
+  @include flexbox(row, nowrap, flex-start, flex-start);
+
+}
+
+.location > span {
+  vertical-align: top;
+}
+
+.time > span {
+  vertical-align: top;
+}
+span > i {
+  padding-right: 5px;
+}
+.name {
+  font-weight: bold;
+
+}
+
+.location-icon {
+  color: red;
+}
+
+.clock-icon {
+
+}
+
+.date {
+  @include flexbox(column, nowrap, space-between, stretch);
+  text-align: center;
+  min-width: 120px;
+  color: #8D8D8D;
+}
+
+.day {
+  font-size: 32px;
+}
+
+
+

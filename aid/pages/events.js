@@ -16,9 +16,9 @@ export default class Events extends React.Component {
 
         const events = data.map(event => ({
             name: event.name,
-            date: event.start_time.substring(0, event.start_time.indexOf('T')),
+            date: event.start_time,
             location: event.place ? event.place.name : null,
-            time: event.start_time.substring(event.start_time.indexOf('T') + 1, event.start_time.indexOf(':00-')),
+            time: event.start_time,
         }));
 
         const toRender = events.map((item, i) => (
@@ -26,7 +26,12 @@ export default class Events extends React.Component {
         ));
 
         return (
-            <div className='events'>{toRender}</div>
+            <div className='content'>
+                <section className='events'>
+                    <h2>Events</h2>
+                    {toRender}
+                </section>
+            </div>
         )
     }
 }
