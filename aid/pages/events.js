@@ -19,10 +19,11 @@ export default class Events extends React.Component {
             date: event.start_time,
             location: event.place ? event.place.name : null,
             time: event.start_time,
+            id: event.id,
         }));
 
-        const toRender = events.map((item, i) => (
-            <Event name={item.name} date={item.date} location={item.location} time={item.time} key={i} />
+        const toRender = events.map((item) => (
+            <Event name={item.name} date={item.date} location={item.location} time={item.time} id={item.id} key={item.id} />
         ));
 
         return (

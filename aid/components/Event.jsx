@@ -31,7 +31,7 @@ class Event extends React.Component {
                     <div>{dateTime[2]}</div>
                 </div>
                 <div>
-                    <div className="name">{this.props.name}</div>
+                    <div className="name"><a href={"https://www.facebook.com/events/"+ this.props.id} target="_blank">{this.props.name}</a></div>
                     {this.props.location &&
                         <div className="location">
                             <span>
