@@ -1,0 +1,49 @@
+@import 'index';
+
+$desktop: "only screen and (min-width: 800px)";
+
+.page-footer {
+    background-color: #f5f5f5;
+    padding: 24px 0 24px 0;
+    font-size: 14px; 
+    line-height: 22px;
+
+    .footer-container {
+        width: 95%;
+        margin: 0px auto 0px auto;
+
+        @include flexbox(row, wrap, space-between, flex-start);
+        
+        @media #{$desktop} {
+            width: 85%;
+            min-width: 744px;
+        }
+    
+        .contact-info {
+            a {
+                color: #4990e2;
+            }
+            > h5 {
+                margin-bottom: 8px;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            
+            > ul, li {
+                margin: 0;
+            }
+        }
+
+        .footer-icons {
+            padding: 16px 0px 0px 24px;
+            text-align: center;
+            flex-grow: 1;
+            align-self: flex-end;
+            
+            @media screen and (min-width: 600px) {
+                text-align: right;
+            }
+
+        }
+    }
+}
