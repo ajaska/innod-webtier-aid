@@ -1,2 +1,3 @@
 siteTitle="AID Berkeley"
-linkPrefix = "/gatsby-starter-default"
+
+linkPrefix = "/"
