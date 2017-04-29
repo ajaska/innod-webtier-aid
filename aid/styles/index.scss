@@ -12,6 +12,11 @@
     align-items: $align;
 }
 
+// Responsive Cutoffs
+$mobile:  '((orientation: portrait) and (max-width: 420px)) or ((orientation: landscape) and (max-height: 420px))';
+$tablet:  '((orientation: portrait) and (max-width: 1199px) or ((orientation: landscape) and (max-height: 1199px))';
+$desktop: '(min-width: 1200px)';
+
 
 // Global
 * {
@@ -59,10 +64,6 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-}
-
-.content {
-    padding-top: 80px; // navbar padding
 }
 
 .backdrop {

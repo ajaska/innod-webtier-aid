@@ -1,7 +1,11 @@
 siteTitle="AID Berkeley"
 
-aidGlobalUrl="http://aidindia.org"
-aidBayAreaUrl="http://aidbayarea.org"
-email="info@bayarea.aidindia.org"
-
 linkPrefix = "/"
+
+[contact]
+"AID Global" = "https://aidindia.org"
+"AID Bay Area" = "https://aidbayarea.org"
+"Email" = "info@bayarea.aidinida.org"
+
+[social]
+facebook = "https://www.facebook.com/aidberkeley"
