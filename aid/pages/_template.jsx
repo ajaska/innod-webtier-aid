@@ -19,15 +19,18 @@ module.exports = React.createClass({
     }
   },
   render () {
+    // All non-home pages should account for opaque navbar.
+    const notHome = (this.props.location.pathname !== '/')
+
     return (
       <div>
-        <Helmet title={`${config.siteTitle}`} >
+        <Helmet title={config.siteTitle} >
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         </Helmet>
 
-        <Navbar />
+        <Navbar opaque={notHome} />
 
-        <div className="body">    
+        <div className={'body' + (notHome ? ' showNav' : '')} >
           {this.props.children}
         </div>
 
