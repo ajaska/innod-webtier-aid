@@ -10,6 +10,7 @@ import { rhythm } from '../utils/typography'
 
 import '~/styles/index'
 import Navbar from '~/components/Navbar'
+import Footer from 'components/Footer'
 
 module.exports = React.createClass({
   propTypes () {
@@ -35,6 +36,8 @@ module.exports = React.createClass({
         <div className="body">    
           {this.props.children}
         </div>
+
+        <Footer /> 
       </div>
 
     )
