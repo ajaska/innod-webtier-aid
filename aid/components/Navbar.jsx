@@ -75,7 +75,6 @@ class Navbar extends React.Component
                         <li><Link to={prefixLink('/')}          onClick={this.hideMenu}> Home     </Link></li>
                         <li><Link to={prefixLink('/events/')}   onClick={this.hideMenu}> Events   </Link></li>
                         <li><Link to={prefixLink('/projects/')} onClick={this.hideMenu}> Projects </Link></li>
-                        <li>Contact</li>
                     </ul>
                 </nav>
             </Headroom>
