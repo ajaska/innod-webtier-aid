@@ -16,7 +16,7 @@ $desktop: "only screen and (min-width: 800px)";
     position: relative;
 
     * { margin: 0; }
-    > .titles {
+    > .card-titles {
         border-left: solid 8px;
         padding-left: 28px;
     }
@@ -42,17 +42,17 @@ $desktop: "only screen and (min-width: 800px)";
     padding: 24px 36px 24px 36px;
 
     &:nth-child(3n+1) {
-        > .titles { border-color: $accent1; }
+        > .card-titles { border-color: $accent1; }
         > .card-body > a { background-color: $accent1; }
     }
 
     &:nth-child(3n+2) {
-        > .titles { border-color: $accent2; }
+        > .card-titles { border-color: $accent2; }
         > .card-body > a { background-color: $accent2; }
     }
 
     &:nth-child(3n+3) {
-        > .titles { border-color: $accent3; }
+        > .card-titles { border-color: $accent3; }
         > .card-body > a { background-color: $accent3; }
     }
 

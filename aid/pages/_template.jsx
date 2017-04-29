@@ -5,6 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 import Helmet from 'react-helmet'
 
+import { config } from 'config'
 import { rhythm } from '../utils/typography'
 
 import '~/styles/index'
@@ -21,8 +22,10 @@ module.exports = React.createClass({
     return (
       <div>
 
-        <Helmet>
-          <title>AID BERKELEY</title>
+        <Helmet
+          title={`${config.siteTitle}`}
+        >
+
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         </Helmet>
 
