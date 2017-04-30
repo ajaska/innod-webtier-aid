@@ -24,7 +24,7 @@ class Event extends React.Component {
 
 
         return (
-            <div className="event">
+            <div className="Event">
                 <div className="date">
                     <div>{dateTime[0]}</div>
                     <div className="day">{dateTime[1]}</div>

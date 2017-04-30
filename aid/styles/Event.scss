@@ -1,18 +1,16 @@
-@mixin flexbox($dir, $wrap, $justify, $align)
-{
-  display: flex;
-  flex-flow: $dir $wrap;
-  justify-content: $justify;
-  align-items: $align;
-}
+@import 'index';
 
-.event {
+.Event {
   border: 1px #CFD8DC solid;
   padding: 5px;
   margin: 5px;
   width: 100%;
 
   @include flexbox(row, nowrap, flex-start, flex-start);
+
+  .day {
+    font-size: 32px;
+  }
 
 }
 
@@ -35,10 +33,6 @@ span > i {
   color: red;
 }
 
-.clock-icon {
-
-}
-
 .date {
   @include flexbox(column, nowrap, space-between, stretch);
   text-align: center;
@@ -46,9 +40,7 @@ span > i {
   color: #8D8D8D;
 }
 
-.day {
-  font-size: 32px;
-}
+
 
 
 
