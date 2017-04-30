@@ -23,7 +23,7 @@
         @include flexbox(column, nowrap, space-between, flex-start);
         > ul { margin-bottom: 20px; }
 
-        @media (orientation: landscape) {
+        @media #{$mobile-landscape} {
             @include flexbox(row, nowrap, space-between, center);
             > ul { margin-bottom: 0px; }
         }
@@ -47,6 +47,15 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+    }
+}
+
+@media #{$tablet}
+{
+    .page-footer > .content
+    {
+        @include flexbox(row, nowrap, space-between, center);
+        > ul { margin: 0px; }
     }
 }
 
