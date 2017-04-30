@@ -5,10 +5,12 @@ import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 import Helmet from 'react-helmet'
 
+import { config } from 'config'
 import { rhythm } from '../utils/typography'
 
 import '~/styles/index'
 import Navbar from '~/components/Navbar'
+import Footer from 'components/Footer'
 
 module.exports = React.createClass({
   propTypes () {
@@ -20,8 +22,10 @@ module.exports = React.createClass({
     return (
       <div>
 
-        <Helmet>
-          <title>AID BERKELEY</title>
+        <Helmet
+          title={`${config.siteTitle}`}
+        >
+
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         </Helmet>
 
@@ -32,6 +36,8 @@ module.exports = React.createClass({
         <div className="body">    
           {this.props.children}
         </div>
+
+        <Footer /> 
       </div>
 
     )

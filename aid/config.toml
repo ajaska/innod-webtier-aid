@@ -1,2 +1,7 @@
 siteTitle="AID Berkeley"
-linkPrefix = "/gatsby-starter-default"
+
+aidGlobalUrl="http://aidindia.org"
+aidBayAreaUrl="http://aidbayarea.org"
+email="info@bayarea.aidindia.org"
+
+linkPrefix = "/"
