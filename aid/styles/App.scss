@@ -1,7 +1,7 @@
 @import 'index';
 
-.app {
-
+.app
+{
     * { margin: 0px; }
 
     > header {
@@ -16,7 +16,6 @@
         .backdrop { background: url('/assets/images/banner.png'); }
         .backdrop:before { background-color: rgba(0, 0, 0, 0.6); }
 
-        
         @include flexbox(column, nowrap, center, center);
         h1 {
             font-size: 24px;
@@ -71,6 +70,22 @@
             }
         }
         .ActionCard:last-child { margin: 0px; }
+    }
+}
+
+@media #{$tablet}
+{
+    .app
+    {
+        header {
+            height: 40vh;
+            @media (orientation: landscape) {
+                height: 60vh;
+            }
+
+            h1.short { display: none; }
+            h1.full { display: block; }
+        }
     }
 }
 
