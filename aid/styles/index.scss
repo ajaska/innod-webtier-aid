@@ -1,24 +1,8 @@
-// Mixins
-@mixin tinted-background-image($url, $tint)
-{
-    background-image: linear-gradient($tint, $tint), url($url);
-}
+@import 'media', 'mixins';
 
-@mixin flexbox($dir, $wrap, $justify, $align)
-{
-    display: flex;
-    flex-flow: $dir $wrap;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-// Responsive Cutoffs
-$mobile:  '((orientation: portrait) and (max-width: 420px)) or ((orientation: landscape) and (max-height: 420px))';
-$tablet:  '((orientation: portrait) and (max-width: 1199px) or ((orientation: landscape) and (max-height: 1199px))';
-$desktop: '(min-width: 1200px)';
-
-
-// Global
+// ------------------------------
+// Global Presets
+// ------------------------------
 * {
     margin: 0px;
     padding: 0px;

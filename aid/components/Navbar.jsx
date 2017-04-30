@@ -63,7 +63,10 @@ class Navbar extends React.Component
                 onUnpin={this.unpinned}
                 >
                 <div className='background' style={background}></div>
-                <img className='logo' src="/assets/images/aid_logo_full_white.png"></img>
+
+                <Link to={prefixLink('/')} className='logo'>
+                    <img src="/assets/images/aid_logo_full_white.png"></img>
+                </Link>
 
                 <div className={`button ${active}`} onClick={this.toggleMenu} >
                     <i className='menu material-icons'>menu</i>

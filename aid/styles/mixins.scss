@@ -1,0 +1,13 @@
+
+@mixin tinted-background-image($url, $tint)
+{
+    background-image: linear-gradient($tint, $tint), url($url);
+}
+
+@mixin flexbox($dir, $wrap, $justify, $align)
+{
+    display: flex;
+    flex-flow: $dir $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
