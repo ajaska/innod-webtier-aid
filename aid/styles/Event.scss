@@ -1,45 +1,48 @@
-@import 'index';
+@import 'index', 'mixins';
 
 .Event {
-  border: 1px #CFD8DC solid;
-  padding: 5px;
-  margin: 5px;
-  width: 100%;
+    border: 1px #CFD8DC solid;
+    padding: 5px 5px 5px 0px;
+    margin: 5px;
 
-  @include flexbox(row, nowrap, flex-start, flex-start);
+    @include flexbox(row, nowrap, flex-start, flex-start);
 
-  .day {
-    font-size: 32px;
-  }
+    .name {
+        font-size: 20px; 
+        margin-bottom: 4px;
+        font-weight: 700;
+    }
 
+
+    .location > span, .time > span {
+      vertical-align: top;
+    }
+
+    span > .material-icons {
+      padding-right: 5px;
+    }
+
+    // there is probably a better way to do this
+    .clock-icon {
+        position: relative;
+        top: 1px;
+    }
+
+    .location-icon {
+      color: red;
+    }
+
+    .date {
+        @include flexbox(column, nowrap, space-between, stretch);
+        text-align: center;
+        min-width: 120px;
+        color: #8D8D8D;
+
+        .day {
+            font-size: 32px;
+        }
+    }
 }
-
-.location > span {
-  vertical-align: top;
-}
-
-.time > span {
-  vertical-align: top;
-}
-span > i {
-  padding-right: 5px;
-}
-.name {
-  font-weight: bold;
-
-}
-
-.location-icon {
-  color: red;
-}
-
-.date {
-  @include flexbox(column, nowrap, space-between, stretch);
-  text-align: center;
-  min-width: 120px;
-  color: #8D8D8D;
-}
-
 
 
 
