@@ -12,11 +12,15 @@ class Index extends React.Component
     render ()
     {
         return (
-            <div>
-                <header className='app' >
-                    <div></div>
+            <div className='app'>
+                <header>
+                    <div className='backdrop tinted'></div>
+                    <div className='flex-fill'></div>
 
-                    <h1>
+                    <h1 className='short'>
+                        AID at Berkeley
+                    </h1>
+                    <h1 className='full'>
                         <span>UC Berkeley</span>
                         <span>Association for India's Development</span>
                     </h1>
@@ -49,7 +53,6 @@ class Index extends React.Component
                     <h3 className="title">Squad</h3>
                     {/* TODO: IMPLEMENT PEOPLE */}
                 </section>
-
             </div>
         )
     }

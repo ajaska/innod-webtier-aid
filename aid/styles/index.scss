@@ -1,19 +1,8 @@
-// Mixins
-@mixin tinted-background-image($url, $tint)
-{
-    background-image: linear-gradient($tint, $tint), url($url);
-}
+@import 'media', 'mixins';
 
-@mixin flexbox($dir, $wrap, $justify, $align)
-{
-    display: flex;
-    flex-flow: $dir $wrap;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-
-// Global
+// ------------------------------
+// Global Presets
+// ------------------------------
 * {
     margin: 0px;
     padding: 0px;
@@ -36,14 +25,38 @@ h2 {
     font-weight: 500;
 }
 
-.content {
-    padding-top: 80px; // navbar padding
-}
-
 a {
     color: inherit;
     text-decoration: none;
     :visited { color: inherit; }
+}
+
+
+// NAVBAR
+$navHeight: 56px;
+.body.showNav {
+    padding-top: $navHeight;
+}
+
+
+// MISC
+.backdrop {
+    z-index: -1;
+
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.backdrop.tinted:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .backdrop {
@@ -58,7 +71,6 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 .backdrop.tinted:before {
     content: '';
     display: block;

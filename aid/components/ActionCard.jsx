@@ -21,8 +21,8 @@ const image_dir = '/assets/images/'
 class ActionCard extends React.Component {
 
     render() {
-        const divStyle = {
-            backgroundImage: `url(${image_dir + this.props.image})`,
+        const img = {
+            backgroundImage: `url(${image_dir + this.props.image})`
         }
 
         const textStyle = {
@@ -40,7 +40,8 @@ class ActionCard extends React.Component {
         })
 
         return (
-            <div className='ActionCard' style={divStyle} >
+            <div className='ActionCard'>
+                <div className='backdrop tinted' style={img} />
                 <p style={textStyle} >{ this.props.label || tags.label }</p>
                 <a style={linkStyle} >{ this.props.title || tags.title }</a>
             </div>

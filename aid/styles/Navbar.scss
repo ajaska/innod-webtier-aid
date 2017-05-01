@@ -1,4 +1,132 @@
-nav{
+@import 'index';
+
+$animationDuration: 120ms;
+
+.headroom {
+    width: inherit;
+    height: $navHeight;
+    position: relative;
+    transition: all $animationDuration ease-out;
+
+    .background {
+        z-index: 1;
+
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    // Children
+    color: white;
+
+    * {
+        z-index: 2;
+        margin: 0px;
+    }
+    .logo { display: none; }
+
+    .button {
+        z-index: 12;
+        width: $navHeight;
+        height: inherit;
+        position: relative;
+
+        cursor: pointer;
+        transition: all $animationDuration linear;
+        i {
+            font-size: 24px;
+            top: 16px;
+            left: 16px;
+            position: absolute;
+            transition: opacity $animationDuration linear;
+        }
+        i.menu  { opacity: 1; }
+        i.clear { opacity: 0; }
+    }
+    .button.active {
+        transform: rotate(180deg);
+        i.menu  { opacity: 0; }
+        i.clear { opacity: 1; }
+    }
+
+    nav {
+        top: 0px;
+        right: 0px;
+        position: absolute;
+
+        height: inherit;
+        overflow-x: scroll;
+
+        left: 100%;
+        &.active { left: $navHeight; }
+        transition: left $animationDuration ease-out;
+    }
+
+    ul {
+        width: fit-content;
+        height: inherit;
+        font-size: 16px;
+        font-weight: 300;
+
+        @include flexbox(row, nowrap, left, center);
+        li { margin: 0px 20px; }
+    }
+}
+
+.headroom-wrapper {
+    z-index: 10;
+    width: 100%;
+
+    top: 0px;
+    position: fixed;
+}
+
+// From top of page (scroll = 0) to height of nav.
+// Mutually exclusive with below classes.
+.headroom--unfixed {
+    top: 0px;
+}
+
+// Activated once scroll > navHeight, until scroll becomes 0 again.
+// Will always be active together with either --unpinned or --pinned.
+.headroom--scrolled {}
+
+// Activated with --scrolled first time, then whenever scrolled down.
+// Mutually exclusive with --pinned.
+.headroom--unpinned {
+    top: 0px;
+}
+
+// Only activated after --unpinned as been active once, then whenever scrolled up.
+// Mutually exclusive with --unpinned.
+.headroom--pinned {}
+
+
+@media #{$tablet}
+{
+    .headroom {
+        height: 72px;
+        padding-left: 20px;
+        padding-right: 12px;
+
+        @include flexbox(row, nowrap, space-between, center);
+
+        .button { display: none; }
+        .logo { 
+            display: block;
+            width: 160px;
+            height: auto;
+        }
+
+        nav { position: static; }
+    }
+}
+
+/*
+
+nav {
     top: 0px;
     left: 0px;
     right: 0px;
@@ -71,13 +199,6 @@ nav{
     li:hover:before {
         max-height: 3px;
     }
-
 }
 
-// when navbar is scrolled, see: react-headroom
-.headroom--scrolled {
-    & > nav {
-        background-color: black;
-        position: static;
-    }
-}
+*/
