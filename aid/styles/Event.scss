@@ -1,4 +1,7 @@
-@import 'index', 'mixins';
+@import 'index';
+.events {
+    margin: 0 auto;
+}
 
 .Event {
     border: 1px #CFD8DC solid;
@@ -14,11 +17,11 @@
     }
 
 
-    .location > span, .time > span {
+    .location-text, .time-text {
       vertical-align: top;
     }
 
-    span > .material-icons {
+    .material-icons {
       padding-right: 5px;
     }
 
@@ -33,6 +36,7 @@
     }
 
     .date {
+        align-self: center;
         @include flexbox(column, nowrap, space-between, stretch);
         text-align: center;
         min-width: 120px;
@@ -42,8 +46,29 @@
             font-size: 32px;
         }
     }
+    .location, .time {
+        @include flexbox(row, nowrap, flex-start, stretch);
+    }
 }
 
+@media #{$tablet} {
+    .events {
+        max-width: 680px;
+    }
+}
 
+@media #{$mobile} {
+    .Event {
+        @include flexbox(column, nowrap, flex-start, flex-start);
+
+        .date {
+            @include flexbox(row, nowrap, flex-start, flex-start);
+            min-width: 100%;
+            .day {
+                font-size: inherit;
+            }
+        }
+    }
+}
 
 

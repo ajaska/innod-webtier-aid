@@ -11,9 +11,6 @@ export default class Events extends React.Component {
 
     render () {
 
-        console.log(data[0].place)
-        // 2016-10-21T18:00:00-0700
-
         const events = data.map(event => ({
             name: event.name,
             date: event.start_time,

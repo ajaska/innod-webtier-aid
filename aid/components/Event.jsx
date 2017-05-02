@@ -2,55 +2,51 @@
  * Created by KJ on 4/14/17.
  */
 import React from 'react'
-import '~/styles/Event'
+import 'styles/Event'
 
 function getDateAndTime(date) {
-    var monthNames = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"];
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
 
-    var d = new Date(date);
-    return [monthNames[d.getMonth()], d.getDay(), d.getFullYear(), d.getHours(), d.getMinutes()];
-
+  const d = new Date(date);
+  return [monthNames[d.getMonth()], d.getDay(), d.getFullYear(), d.getHours(), d.getMinutes()];
 }
 
 function pad(n) {
-    return n<10 ? '0' +n : n;
+  return n < 10 ? `0${n}` : n;
 }
 
 class Event extends React.Component {
-    render() {
-        console.log(this.props.location);
-        let dateTime = getDateAndTime(this.props.time);
+  render() {
+    const dateTime = getDateAndTime(this.props.time);
 
+    return (
+      <div className="Event">
+        <div className="date">
+          <div>{dateTime[0]}</div>
+          <div className="day">{dateTime[1]}</div>
+          <div>{dateTime[2]}</div>
+        </div>
+        <div>
+          <div className="name">
+            <a href={`https://www.facebook.com/events/${this.props.id}`} target="_blank" rel="noopeer noreferrer">{this.props.name}</a>
+          </div>
 
-        return (
-            <div className="Event">
-                <div className="date">
-                    <div>{dateTime[0]}</div>
-                    <div className="day">{dateTime[1]}</div>
-                    <div>{dateTime[2]}</div>
-                </div>
-                <div>
-                    <div className="name"><a href={"https://www.facebook.com/events/"+ this.props.id} target="_blank">{this.props.name}</a></div>
-                    {this.props.location &&
-                        <div className="location">
-                            <span>
-                                <i className='material-icons location-icon'>location_on</i>
-                                {this.props.location}
-                            </span>
-                        </div>
-                    }
-
-                    <div className="time">
-                        <span>
-                            <i className='material-icons clock-icon'>access_time</i>
-                            {dateTime[3]}:{pad(dateTime[4])}
-                        </span>
-                    </div>
-                </div>
+          {this.props.location &&
+            <div className="location">
+              <i className="material-icons location-icon">location_on</i>
+              <span className="location-text">{this.props.location}</span>
             </div>
-        )
-    }
+          }
+
+          <div className="time">
+            <i className="material-icons clock-icon">access_time</i>
+            <span className="time-text">{dateTime[3]}:{pad(dateTime[4])}</span>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Event;

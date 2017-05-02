@@ -11,5 +11,5 @@ $tablet: $tablet-portrait, $tablet-landscape;
 
 $desktop-cutoff: 1200px;
 $desktop-portrait:  '(orientation: portrait)  and (min-width:  #{$desktop-cutoff})';
-$desktop-landscape: '(orientation: landscape) and (min-height: #{$desktop-cutoff})';
+$desktop-landscape: '(orientation: landscape) and (min-width: #{$desktop-cutoff})';
 $desktop: $desktop-portrait, $desktop-landscape;
