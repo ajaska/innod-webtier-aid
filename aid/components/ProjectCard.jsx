@@ -26,8 +26,8 @@ const ProjectCard = (props) => {
         <p>{ props.description }</p>
 
         {/* Renders the Read More button only if the url is defined. */}
-        {'url' in props && typeof url !== 'undefined' &&
-        <a href={props.url}>Read More</a>
+        {'url' in props && typeof props.url !== 'undefined' &&
+          <a href={props.url}>Read More</a>
         }
       </div>
     </div>
