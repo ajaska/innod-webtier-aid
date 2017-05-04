@@ -1,7 +1,7 @@
 import React from 'react'
 import '~/styles/ActionCard'
 
-const image_dir = '/assets/images/'
+const imageDir = '/assets/images/'
 
 /**
  * usage
@@ -9,7 +9,7 @@ const image_dir = '/assets/images/'
  *     <label>LABEL</label>
  *     <title>TITLE</title>
  * </ActionCard>
- * 
+ *
  * props
  * - image: String filename for background image (e.g. test.png)
  * - color: String hex value for the primary color (e.g. #FFFFFF)
@@ -18,35 +18,31 @@ const image_dir = '/assets/images/'
  * - <label>: message to display
  * - <title>: title to put on the button
  */
-class ActionCard extends React.Component {
+const ActionCard = (props) => {
+  const img = {
+    backgroundImage: `url(${imageDir + props.image})`,
+  }
 
-    render() {
-        const img = {
-            backgroundImage: `url(${image_dir + this.props.image})`
-        }
+  const textStyle = {
+    borderColor: props.color,
+  }
 
-        const textStyle = {
-            borderColor: this.props.color
-        }
+  const linkStyle = {
+    backgroundColor: props.color,
+  }
 
-        const linkStyle = {
-            backgroundColor: this.props.color
-        }
+  const tags = {}
+  props.children.forEach((c) => {
+    if (typeof c.props.children === 'string') { tags[c.type] = c.props.children }
+  })
 
-        const tags = {}
-        this.props.children.forEach(c => {
-            if (typeof c.props.children === 'string')
-                tags[c.type] = c.props.children
-        })
-
-        return (
-            <div className='ActionCard'>
-                <div className='backdrop tinted' style={img} />
-                <p style={textStyle} >{ this.props.label || tags.label }</p>
-                <a style={linkStyle} >{ this.props.title || tags.title }</a>
-            </div>
-        )
-    }
+  return (
+    <div className="ActionCard">
+      <div className="backdrop tinted" style={img} />
+      <p style={textStyle} >{ props.label || tags.label }</p>
+      <a style={linkStyle} >{ props.title || tags.title }</a>
+    </div>
+  )
 }
 
 export default ActionCard;

@@ -7,7 +7,7 @@ export default class Projects extends React.Component {
   render() {
     const projects = this.props.route.pages.filter(page => (
       page.file.ext === 'md' && page.path.includes('/projects/')))
-    
+
     return (
       <div className="content">
         <section className="projects">
@@ -15,6 +15,6 @@ export default class Projects extends React.Component {
           <ProjectsList projects={projects} />
         </section>
       </div>
-    ) 
+    )
   }
 }
