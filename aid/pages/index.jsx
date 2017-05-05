@@ -10,7 +10,7 @@ class Index extends React.Component {
       <div className="app">
         <header>
           <div className="backdrop tinted" />
-          <div className="flex-fill" />
+          <div className="desktop flex-fill" />
 
           <h1 className="short">AID at Berkeley</h1>
           <h1 className="full">
@@ -18,7 +18,7 @@ class Index extends React.Component {
             <span>Association for India's Development</span>
           </h1>
 
-          <a href="#">
+          <a href="#" className="desktop">
             Learn More
             <i className="material-icons">keyboard_arrow_down</i>
           </a>
@@ -37,7 +37,7 @@ class Index extends React.Component {
           </ActionCard>
 
           <ActionCard color="#03A9F4" image="card2.png">
-            <label>Make a real impact with your contribution</label>
+            <label>Make a real impact through your contribution</label>
             <title>Donate</title>
           </ActionCard>
         </section>
