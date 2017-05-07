@@ -2,6 +2,7 @@
 
 $animationDuration: 120ms;
 $navHeight: 72px;
+.body.showNav { padding-top: $navHeight; }
 .headroom {
     width: inherit;
     height: $navHeight;
@@ -37,8 +38,8 @@ $navHeight: 72px;
         transition: all $animationDuration linear;
         i {
             font-size: 24px;
-            top: 16px;
-            left: 16px;
+            top: 24px;
+            left: 24px;
             position: absolute;
             transition: opacity $animationDuration linear;
         }
