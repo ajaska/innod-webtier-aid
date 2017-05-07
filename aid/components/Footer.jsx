@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <footer className="page-footer">
-      <h5>Contact Us</h5>
+      <h5 className='title'>Contact Us</h5>
       <div className="content">
         <ul className="contact-info">
           {contactItems}
