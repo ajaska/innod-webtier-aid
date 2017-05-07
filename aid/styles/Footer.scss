@@ -29,7 +29,7 @@
         }
     }
 
-    ul.contact-info {
+    .contact-info {
         @include flexbox(column, nowrap, space-around, flex-start);
         li { margin-bottom: 4px; }
         a { color: #4990e2; }
@@ -59,9 +59,12 @@
     }
 }
 
+@media #{$desktop}
+{
+    // TODO
+}
 
-// $desktop: "only screen and (min-width: 800px)";
-//
+// Previous desktop styling
 // .page-footer {
 //     background-color: #f5f5f5;
 //     padding: 24px 0 24px 0;
