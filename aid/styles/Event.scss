@@ -46,6 +46,7 @@
             font-size: 32px;
         }
     }
+    
     .location, .time {
         @include flexbox(row, nowrap, flex-start, stretch);
     }
@@ -60,12 +61,23 @@
 @media #{$mobile} {
     .Event {
         @include flexbox(column, nowrap, flex-start, flex-start);
+        padding-left: 5px;
 
         .date {
             @include flexbox(row, nowrap, flex-start, flex-start);
             min-width: 100%;
+            font-size: 16px;
+            line-height: 24px;
             .day {
                 font-size: inherit;
+                &:after {
+                    content: ',\00a0';
+                    display: inline-block;
+                }
+            }
+            & > div:not(.day):after {
+                content: '\00a0';
+                display: inline-block;
             }
         }
     }
