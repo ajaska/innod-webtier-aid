@@ -32,14 +32,6 @@ a {
     :visited { color: inherit; }
 }
 
-
-// NAVBAR
-$navHeight: 56px;
-.body.showNav {
-    padding-top: $navHeight;
-}
-
-
 // MISC
 .backdrop {
     z-index: -1;

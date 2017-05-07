@@ -43,7 +43,7 @@ class Navbar extends React.Component {
 
   render() {
     const active = this.state.active ? 'active' : ''
-    const background = { backgroundColor: this.state.opaque ? 'black' : 'transparent' }
+    const background = { backgroundColor: this.state.opaque ? 'rgba(0, 0, 0, 0.8)' : 'transparent' }
 
     return (
       <Headroom

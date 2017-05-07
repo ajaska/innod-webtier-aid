@@ -1,7 +1,7 @@
 @import 'index';
 
 $animationDuration: 120ms;
-
+$navHeight: 72px;
 .headroom {
     width: inherit;
     height: $navHeight;
@@ -110,7 +110,7 @@ $animationDuration: 120ms;
 @media #{$tablet}
 {
     .headroom {
-        height: 72px;
+        height: $navHeight;
         padding-left: 20px;
         padding-right: 12px;
 
@@ -129,8 +129,10 @@ $animationDuration: 120ms;
 
 @media #{$desktop}
 {
+    $navHeight: 88px;
+    .body.showNav { padding-top: $navHeight; }
     .headroom {
-        height: 88px;
+        height: $navHeight;
         padding-right: 20px;
 
         .logo { width: 180px; }
