@@ -9,7 +9,7 @@ $tablet-portrait:  '(orientation: portrait)  and (min-width:  #{$tablet-cutoff})
 $tablet-landscape: '(orientation: landscape) and (min-height: #{$tablet-cutoff})';
 $tablet: $tablet-portrait, $tablet-landscape;
 
-$desktop-cutoff: 1200px;
+$desktop-cutoff: 801px;
 $desktop-portrait:  '(orientation: portrait)  and (min-width:  #{$desktop-cutoff})';
 $desktop-landscape: '(orientation: landscape) and (min-width: #{$desktop-cutoff})';
 $desktop: $desktop-portrait, $desktop-landscape;
